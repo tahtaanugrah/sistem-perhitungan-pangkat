@@ -27,10 +27,12 @@
     @include('layouts.navbar')
 
     <!-- CONTENT -->
-    <div class="page-wrapper">
-        <div class="container-fluid">
+    <div class="page-wrapper d-flex flex-column min-vh-100">
+        <div class="container-fluid flex-grow-1">
             @yield('content')
         </div>
+
+        @include('layouts.footer')
     </div>
 
 </div>
