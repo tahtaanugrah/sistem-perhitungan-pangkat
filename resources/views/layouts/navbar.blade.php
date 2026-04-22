@@ -1,5 +1,81 @@
 
-   <header class="topbar" data-navbarbg="skin6">
+<style>
+    /* Flat top navbar without container styling. */
+    .modern-topbar.topbar {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100% !important;
+        border-radius: 0;
+        border: 0;
+        box-shadow: none;
+        overflow: visible;
+        background: #ffffff;
+    }
+
+    .modern-topbar .top-navbar {
+        border-radius: 0;
+        min-height: 80px;
+    }
+
+    .modern-topbar .nav-link {
+        border-radius: 12px;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .modern-topbar .nav-item:hover > .nav-link,
+    .modern-topbar .nav-item.show > .nav-link {
+        background-color: #e8f0fe;
+        transform: translateY(-1px);
+    }
+
+    .modern-topbar .top-navbar .navbar-header {
+        border-radius: 0;
+        box-shadow: none;
+        background: transparent !important;
+        border-right: 0;
+    }
+
+    .modern-topbar .navbar-collapse {
+        border-bottom: 0;
+    }
+
+    @media (min-width: 992px) {
+        .modern-topbar.topbar {
+            left: 260px;
+            right: 0;
+            width: calc(100% - 260px) !important;
+        }
+
+        .modern-topbar .top-navbar .navbar-header {
+            display: none;
+        }
+
+        .modern-topbar .top-navbar .navbar-collapse {
+            margin-left: 0 !important;
+        }
+    }
+
+    @media (max-width: 991.98px) {
+        .modern-topbar.topbar {
+            margin: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100% !important;
+            border-radius: 0;
+            border: 0;
+            box-shadow: none;
+        }
+
+        .modern-topbar .top-navbar,
+        .modern-topbar .navbar-header {
+            border-radius: 0;
+        }
+    }
+</style>
+
+   <header class="topbar modern-topbar" data-navbarbg="skin6">
             <nav class="navbar top-navbar navbar-expand-md">
                 <div class="navbar-header" data-logobg="skin6">
                     <!-- This is for the sidebar toggle which is visible on mobile only -->

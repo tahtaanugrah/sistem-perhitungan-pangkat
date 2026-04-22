@@ -1,7 +1,99 @@
 
-  <aside class="left-sidebar" data-sidebarbg="skin6">
+<style>
+    /* Local style for a softer, modern sidebar card look. */
+    .modern-sidebar.left-sidebar {
+        padding-top: 0;
+        border-radius: 18px;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+        overflow: hidden;
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    @media (min-width: 992px) {
+        .modern-sidebar.left-sidebar {
+            top: 12px;
+            left: 12px;
+            width: 236px;
+            height: calc(100% - 24px);
+            margin: 0;
+        }
+
+        .modern-sidebar .scroll-sidebar {
+            height: 100%;
+        }
+    }
+
+    .modern-sidebar .sidebar-brand {
+        height: 82px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+        background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .modern-sidebar .sidebar-brand img {
+        max-height: 34px;
+        width: auto;
+    }
+
+    .modern-sidebar .scroll-sidebar {
+        border-radius: 18px;
+    }
+
+    .modern-sidebar .sidebar-nav {
+        padding-top: 0;
+    }
+
+    .modern-sidebar .sidebar-link {
+        margin: 4px 10px;
+        border-radius: 12px;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .modern-sidebar .sidebar-link:hover,
+    .modern-sidebar .sidebar-item.selected > .sidebar-link,
+    .modern-sidebar .sidebar-link.active {
+        background-color: #e8f0fe;
+        transform: translateX(2px);
+    }
+
+    .modern-sidebar .nav-small-cap {
+        margin-top: 8px;
+        padding-left: 16px;
+        color: #64748b;
+        letter-spacing: 0.4px;
+        font-weight: 600;
+    }
+
+    @media (max-width: 991.98px) {
+        .modern-sidebar.left-sidebar {
+            margin: 0;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 100%;
+            border-radius: 0;
+            border: 0;
+            box-shadow: none;
+        }
+
+        .modern-sidebar .scroll-sidebar {
+            border-radius: 0;
+        }
+    }
+</style>
+
+<aside class="left-sidebar modern-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar" data-sidebarbg="skin6">
+                <div class="sidebar-brand">
+                    <a href="index.html">
+                        <img src="https://placehold.co/220x60/EAF2FF/1D4ED8?text=%E2%88%91+Pangkat" alt="SiPerPangkat" class="img-fluid">
+                    </a>
+                </div>
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
